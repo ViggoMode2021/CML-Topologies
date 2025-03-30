@@ -1,0 +1,725 @@
+annotations: []
+smart_annotations: []
+nodes:
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: "Building configuration...\n\nCurrent configuration : 4123 bytes\n\
+          !\n! Last configuration change at 14:51:43 UTC Sun Mar 30 2025\n!\nversion\
+          \ 17.15\nservice timestamps debug datetime msec\nservice timestamps log\
+          \ datetime msec\n!\nhostname R1\n!\nboot-start-marker\nboot-end-marker\n\
+          !\n!\nno logging console\nno aaa new-model\n!\n!\n!\n!\nip vrf VRF1\n rd\
+          \ 1:1\n route-target export 1:1\n route-target import 1:1\n!\n!\n!\n!\n\
+          !\n!\n!\n!\n!\n!\nip cef\nlogin on-success log\nno ipv6 cef\n!\n!\n!\n!\n\
+          !\n!\n!\n!\nmpls label range 16 1000\n!\n!\ncrypto pki trustpoint TP-self-signed-131184656\n\
+          \ enrollment selfsigned\n subject-name cn=IOS-Self-Signed-Certificate-131184656\n\
+          \ revocation-check none\n rsakeypair TP-self-signed-131184656\n hash sha512\n\
+          !\n!\ncrypto pki certificate chain TP-self-signed-131184656\n certificate\
+          \ self-signed 01\n  3082032E 30820216 A0030201 02020101 300D0609 2A864886\
+          \ F70D0101 0D050030\n  30312E30 2C060355 04030C25 494F532D 53656C66 2D536967\
+          \ 6E65642D 43657274\n  69666963 6174652D 31333131 38343635 36301E17 0D323530\
+          \ 33333031 34333235\n  355A170D 33353033 33303134 33323535 5A303031 2E302C06\
+          \ 03550403 0C25494F\n  532D5365 6C662D53 69676E65 642D4365 72746966 69636174\
+          \ 652D3133 31313834\n  36353630 82012230 0D06092A 864886F7 0D010101 05000382\
+          \ 010F0030 82010A02\n  82010100 A8418C88 6DA3A428 1880BE2F C82941E9 82913AE8\
+          \ C2091519 8083FA32\n  99FF8AFB 4879095B 53AB561D EA39526B 202A7B84 22F932AE\
+          \ 25795099 C16F2823\n  2C2623BF 380E1E11 8592E6BA 16A8CF32 F9FE0626 E368FD78\
+          \ 0C48A366 2D8949B9\n  7D0390F3 6CC81F55 FF09F74E 937DAA41 B0528994 BB06DD6B\
+          \ 69F4F8B0 9B63F9F5\n  6DE6D863 41FD4A3E EA2B94DF A35F2558 A860C458 646D1550\
+          \ 9CE2915A 1C99A405\n  F1436C5A 63391DFC DECF97BA A8A37575 24131A74 DBDEBC3A\
+          \ 8C0D3410 0392128B\n  D22C588A 2C45941E FE69E603 6897F76A 3DFEE931 97A3F01A\
+          \ 278D0E28 7C60EA13\n  039CAFE6 C5B6E8DC BDFB2193 19AC36D2 0C1F9DED 850B2FC5\
+          \ 66C3D0D2 BB567A29\n  1BB8FB2B 02030100 01A35330 51301D06 03551D0E 04160414\
+          \ 5C9BB211 067ED3AE\n  6A26FC35 F0CFCA38 251FC6CB 301F0603 551D2304 18301680\
+          \ 145C9BB2 11067ED3\n  AE6A26FC 35F0CFCA 38251FC6 CB300F06 03551D13 0101FF04\
+          \ 05300301 01FF300D\n  06092A86 4886F70D 01010D05 00038201 01006B34 DB882702\
+          \ 56B14D09 45BDA8DA\n  63EFABCF 2616DD12 7410C69B ACF12988 A106B13F F06C0920\
+          \ 7B6B37CA 1A68FCAF\n  16C73323 377F8ADA FA22EC11 AE34AF7F 510B440F 84E04758\
+          \ A82BD9FB 3AE8607B\n  3712F40A B4FF2275 047D0C11 67F2C82A 261C82DA 83D32D6D\
+          \ 318A6161 FD94A55A\n  ED742F0B 550C266E 3103253D A60EA397 D0737910 25C17951\
+          \ 6CF0453F C82E77FF\n  DAD93046 0DF4522F FA8A65A9 BC5428DA B2190172 15F804E3\
+          \ F2999F24 624C8A8F\n  530E3969 745AF638 8FB85B07 D0714C95 0C20DA8A EFE3D18B\
+          \ 0D55D7A0 DC07B6A0\n  DA17BB3E 71C9ADD9 9C276E2D 9E0F4D6E 10B279B0 CEA111FF\
+          \ B3EA500D C535A0F6\n  D6FFF54F E23CFA01 346677B2 F2FD2864 53AB\n  \tquit\n\
+          !\n!\nmemory free low-watermark processor 80093\n!\n!\nspanning-tree mode\
+          \ rapid-pvst\n!\n!\n!\n!\n!\n!\n!\n!\nclass-map match-any Class-2\n match\
+          \ ip precedence 3\nclass-map match-any Class-1\n match ip precedence 5\n\
+          !\npolicy-map Policy-1\n class Class-1\n  priority percent 50\n class Class-2\n\
+          \  bandwidth 500000\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n\
+          interface Loopback0\n no ip address\n!\ninterface Ethernet0/0\n description\
+          \ Link to R2\n bandwidth 10000\n ip vrf forwarding VRF1\n ip address 10.0.12.1\
+          \ 255.255.255.252\n mpls ip\n!\ninterface Ethernet0/1\n description Link\
+          \ to R3\n bandwidth 10000\n ip vrf forwarding VRF1\n ip address 10.0.13.1\
+          \ 255.255.255.252\n mpls ip\n!\ninterface Ethernet0/2\n description Link\
+          \ to Customer/VRF1\n bandwidth 10000\n ip vrf forwarding VRF1\n ip address\
+          \ 192.168.4.2 255.255.255.0\n mpls ip\n!\ninterface Ethernet0/3\n no ip\
+          \ address\n shutdown\n!\nrouter bgp 65000\n bgp router-id 192.168.1.1\n\
+          \ bgp log-neighbor-changes\n network 172.16.0.0 mask 255.255.255.0\n network\
+          \ 192.168.1.0\n neighbor 10.0.0.2 remote-as 65000\n neighbor 10.0.0.3 remote-as\
+          \ 65000\n neighbor 10.0.12.2 remote-as 65000\n neighbor 10.0.13.2 remote-as\
+          \ 65000\n !\n address-family ipv4 vrf VRF1\n  redistribute connected\n exit-address-family\n\
+          !\nip forward-protocol nd\n!\n!\nip http server\nip http secure-server\n\
+          ip ssh bulk-mode 131072\nno logging btrace\nmpls ldp router-id Loopback0\
+          \ force\n!\n!\n!\ncontrol-plane\n!\n!\n!\nline con 0\n exec-timeout 0 0\n\
+          \ logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 0 0\n login\n\
+          \ transport input ssh\n!\n!\n!\n!\nend"
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: R1
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -200
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 1684 bytes
+          !
+          ! Last configuration change at 14:51:43 UTC Sun Mar 30 2025
+          !
+          version 17.15
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          !
+          hostname R3
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          no aaa new-model
+          !
+          !
+          !
+          !
+          ip vrf VRF1
+           rd 1:1
+           route-target export 1:1
+           route-target import 1:1
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          login on-success log
+          no ipv6 cef
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          memory free low-watermark processor 80093
+          !
+          !
+          spanning-tree mode rapid-pvst
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          class-map match-any Class-2
+           match ip precedence 3
+          class-map match-any Class-1
+           match ip precedence 5
+          !
+          policy-map Policy-3
+           class Class-1
+            priority percent 50
+           class Class-2
+            bandwidth percent 30
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           no ip address
+          !
+          interface Ethernet0/0
+           description Link to R1
+           bandwidth 10000
+           ip address 10.0.13.2 255.255.255.252
+           mpls ip
+          !
+          interface Ethernet0/1
+           description Link to R2
+           bandwidth 10000
+           ip address 10.0.23.2 255.255.255.252
+           mpls ip
+          !
+          interface Ethernet0/2
+           description Link to Customer/VRF1
+           bandwidth 10000
+           ip address 192.168.3.1 255.255.255.0
+          !
+          interface Ethernet0/3
+           no ip address
+           shutdown
+          !
+          router bgp 65000
+           bgp router-id 192.168.3.1
+           bgp log-neighbor-changes
+           neighbor 10.0.13.1 remote-as 65000
+           neighbor 10.0.23.1 remote-as 65000
+           !
+           address-family ipv4 vrf VRF1
+            redistribute connected
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          ip http server
+          ip http secure-server
+          ip ssh bulk-mode 131072
+          no logging btrace
+          mpls ldp router-id Loopback0 force
+          !
+          !
+          !
+          control-plane
+          !
+          !
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input ssh
+          !
+          !
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R3
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -40
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 2020 bytes
+          !
+          ! Last configuration change at 14:51:43 UTC Sun Mar 30 2025
+          !
+          version 17.15
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          !
+          hostname R2
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          no aaa new-model
+          !
+          !
+          !
+          !
+          ip vrf VRF1
+           rd 1:1
+           route-target export 1:1
+           route-target import 1:1
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          login on-success log
+          no ipv6 cef
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          mpls label range 2001 3000
+          !
+          !
+          !
+          !
+          !
+          memory free low-watermark processor 80093
+          !
+          !
+          spanning-tree mode rapid-pvst
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          class-map match-any Class-2
+           match ip precedence 3
+          class-map match-any Class-1
+           match ip precedence 5
+          !
+          policy-map Policy-2
+           class Class-1
+            priority percent 50
+           class Class-2
+            bandwidth percent 30
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Loopback0
+           no ip address
+          !
+          interface Ethernet0/0
+           description Link to R1
+           bandwidth 10000
+           ip address 10.0.12.2 255.255.255.252
+           mpls ip
+          !
+          interface Ethernet0/1
+           description Link to R3
+           bandwidth 10000
+           ip address 10.0.23.1 255.255.255.252
+           mpls ip
+          !
+          interface Ethernet0/2
+           description Link to Customer/VRF1
+           bandwidth 10000
+           ip vrf forwarding VRF1
+           ip address 192.168.2.1 255.255.255.0
+          !
+          interface Ethernet0/3
+           no ip address
+           shutdown
+          !
+          router bgp 65000
+           bgp router-id 192.168.2.1
+           bgp log-neighbor-changes
+           network 172.16.0.0 mask 255.255.255.0
+           network 172.16.1.0 mask 255.255.255.0
+           network 172.16.2.0 mask 255.255.255.0
+           network 192.168.1.0
+           network 192.168.2.0
+           network 192.168.3.0
+           neighbor 10.0.0.1 remote-as 65000
+           neighbor 10.0.0.2 remote-as 65000
+           neighbor 10.0.0.3 remote-as 65000
+           neighbor 10.0.12.1 remote-as 65000
+           neighbor 10.0.23.2 remote-as 65000
+           !
+           address-family ipv4 vrf VRF1
+            redistribute connected
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          ip http server
+          ip http secure-server
+          ip ssh bulk-mode 131072
+          no logging btrace
+          mpls ldp router-id Loopback0 force
+          !
+          !
+          !
+          control-plane
+          !
+          !
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input ssh
+          !
+          !
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: R2
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -120
+    y: -200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration:
+      - name: ios_config.txt
+        content: |-
+          Building configuration...
+
+          Current configuration : 1462 bytes
+          !
+          ! Last configuration change at 14:51:54 UTC Sun Mar 30 2025
+          !
+          version 17.15
+          service timestamps debug datetime msec
+          service timestamps log datetime msec
+          !
+          hostname R4
+          !
+          boot-start-marker
+          boot-end-marker
+          !
+          !
+          no logging console
+          no aaa new-model
+          !
+          !
+          !
+          !
+          ip vrf VRF1
+           rd 1:1
+           route-target export 1:1
+           route-target import 1:1
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          ip cef
+          login on-success log
+          no ipv6 cef
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          memory free low-watermark processor 80093
+          !
+          !
+          spanning-tree mode rapid-pvst
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          class-map match-any Class-2
+           match ip precedence 3
+          class-map match-any Class-1
+           match ip precedence 5
+          !
+          policy-map Policy-1
+           class Class-1
+            priority percent 50
+           class Class-2
+            bandwidth percent 50
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          !
+          interface Ethernet0/0
+           bandwidth 10000
+           ip vrf forwarding VRF1
+           ip address 192.168.4.1 255.255.255.0
+          !
+          interface Ethernet0/1
+           no ip address
+           shutdown
+          !
+          interface Ethernet0/2
+           no ip address
+           shutdown
+          !
+          interface Ethernet0/3
+           no ip address
+           shutdown
+          !
+          router bgp 65000
+           bgp router-id 192.168.4.1
+           bgp log-neighbor-changes
+           network 192.168.4.0
+           neighbor 192.168.4.2 remote-as 65000
+           !
+           address-family ipv4 vrf VRF1
+            redistribute connected
+           exit-address-family
+          !
+          ip forward-protocol nd
+          !
+          !
+          ip http server
+          ip http secure-server
+          ip ssh bulk-mode 131072
+          no logging btrace
+          !
+          !
+          !
+          control-plane
+          !
+          !
+          !
+          line con 0
+           exec-timeout 0 0
+           logging synchronous
+          line aux 0
+          line vty 0 4
+           exec-timeout 0 0
+           login
+           transport input ssh
+          !
+          !
+          !
+          !
+          end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: R4
+    node_definition: iol-xe
+    parameters: {}
+    ram: null
+    tags: []
+    x: -400
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        mac_address: null
+        type: loopback
+      - id: i1
+        label: Ethernet0/0
+        mac_address: null
+        slot: 0
+        type: physical
+      - id: i2
+        label: Ethernet0/1
+        mac_address: null
+        slot: 1
+        type: physical
+      - id: i3
+        label: Ethernet0/2
+        mac_address: null
+        slot: 2
+        type: physical
+      - id: i4
+        label: Ethernet0/3
+        mac_address: null
+        slot: 3
+        type: physical
+links:
+  - id: l0
+    n1: n0
+    n2: n2
+    i1: i1
+    i2: i1
+    conditioning: {}
+    label: iol-0-Ethernet0/0<->iol-2-Ethernet0/0
+  - id: l1
+    n1: n1
+    n2: n0
+    i1: i1
+    i2: i2
+    conditioning: {}
+    label: iol-1-Ethernet0/0<->iol-0-Ethernet0/1
+  - id: l2
+    n1: n1
+    n2: n2
+    i1: i2
+    i2: i2
+    conditioning: {}
+    label: iol-1-Ethernet0/1<->iol-2-Ethernet0/1
+  - id: l3
+    n1: n3
+    n2: n0
+    i1: i1
+    i2: i3
+    conditioning: {}
+    label: iol-3-Ethernet0/0<->iol-0-Ethernet0/2
+lab:
+  description: ''
+  notes: ''
+  title: MPLS, BGP, QoS
+  version: 0.3.0
